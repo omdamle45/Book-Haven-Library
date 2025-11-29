@@ -1,5 +1,5 @@
 # Advanced Book Store (Media Library)
-
+ 
 ## About the Book Store
 A simple, local media library that manages Books, Films, and Magazines. It provides:
 - A Flask backend for CRUD operations on media items.
