@@ -6,28 +6,50 @@
     <title>Book Haven - Om Damle</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background 0.3s, color 0.3s;
+        }
+
         .gradient-text {
             background: linear-gradient(to right, #2563eb, #7c3aed);
-            /* Standard and Webkit properties for compatibility */
             background-clip: text;
-            -webkit-background-clip: text; 
+            -webkit-background-clip: text;
             color: transparent;
-            -webkit-text-fill-color: transparent; 
+            -webkit-text-fill-color: transparent;
         }
+
         .hero-bg {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            transition: background 0.3s;
         }
+
+        .dark-mode {
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .hero-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
         .code-bg {
-            background-color: #1E293B; /* Darker Slate for code boxes */
+            background-color: #1E293B;
             color: #E2E8F0;
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-slate-800">
 
-    <!-- MODERN HEADER -->
+    <!-- DARK MODE TOGGLE -->
+    <button id="darkToggle" class="fixed top-5 right-5 px-4 py-2 bg-slate-800 text-white rounded-full shadow-lg hover:bg-slate-700 transition">
+        🌙 Dark Mode
+    </button>
+
+    <!-- HEADER -->
     <header class="hero-bg py-20 border-b border-blue-100">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <p class="text-blue-600 font-semibold tracking-wider uppercase mb-4">Advanced Programming Final Project</p>
@@ -35,16 +57,18 @@
                 Book Haven <span class="gradient-text">Library Manager</span>
             </h1>
             <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-                A robust, full-stack desktop application designed by <span class="font-bold text-slate-900">Om Damle</span>.
-                Built to streamline library operations with precision and ease.
+                A desktop library management application built by <span class="font-bold text-slate-900">Om Damle</span>,
+                Mechatronics Engineering student at SRH Berlin.
             </p>
+
             <div class="flex justify-center gap-4">
-                <a href="https://github.com/omdamle45/Book-Haven-Library" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-bold transition flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <a href="https://github.com/omdamle45/Book-Haven-Library" target="_blank" 
+                   class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-bold transition flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     <i class="fab fa-github"></i> View Source Code
                 </a>
             </div>
-            
-            <!-- HERO IMAGE (Main App Window) -->
+
+            <!-- HERO IMAGE -->
             <div class="mt-16 relative mx-auto max-w-5xl rounded-xl shadow-2xl border-4 border-white overflow-hidden">
                 <img src="hero_main.png" alt="Book Haven Dashboard" class="w-full">
             </div>
@@ -53,110 +77,131 @@
 
     <main class="max-w-6xl mx-auto px-6 py-16">
 
-        <!-- FEATURES SECTION -->
-        <div class="mb-24">
-            <h2 class="text-3xl font-bold text-center text-slate-900 mb-16">Key Functionalities</h2>
-            
-            <!-- Feature 1: Borrowing -->
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
-                <div class="md:w-1/2">
-                    <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 transform rotate-1 hover:rotate-0 transition duration-500">
-                        <img src="feature_borrow.jpg" alt="Borrowing System" class="w-full rounded-lg">
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="inline-block p-3 bg-green-100 text-green-700 rounded-lg mb-4"><i class="fas fa-hand-holding-box text-xl"></i></div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Smart Borrowing System</h3>
-                    <p class="text-lg text-slate-600 leading-relaxed">
-                        The core of any library. This feature allows librarians to check out items to specific patrons. It records the borrower's name and the transaction date, instantly updating the item's status to "Checked Out" in the database.
-                    </p>
+        <!-- FEATURES -->
+        <h2 class="text-3xl font-bold text-center text-slate-900 mb-16">Key Functionalities</h2>
+
+        <!-- Borrow System -->
+        <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+            <div class="md:w-1/2">
+                <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
+                    <img src="feature_borrow.jpg" class="w-full rounded-lg">
                 </div>
             </div>
-
-            <!-- Feature 2: Analytics -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
-                <div class="md:w-1/2">
-                    <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 transform -rotate-1 hover:rotate-0 transition duration-500">
-                        <img src="feature_stats.jpg" alt="Statistics Dashboard" class="w-full rounded-lg">
-                    </div>
+            <div class="md:w-1/2">
+                <div class="inline-block p-3 bg-green-100 text-green-700 rounded-lg mb-4">
+                    <i class="fas fa-hand-holding-box text-xl"></i>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="inline-block p-3 bg-purple-100 text-purple-700 rounded-lg mb-4"><i class="fas fa-chart-pie text-xl"></i></div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Live Statistics</h3>
-                    <p class="text-lg text-slate-600 leading-relaxed">
-                        Data at a glance. The analytics module queries the backend to generate a real-time summary of the library's inventory, breaking down totals by category (Books, Films, Magazines) and tracking active loans.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Feature 3: Inventory Management -->
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 transform rotate-1 hover:rotate-0 transition duration-500">
-                        <img src="feature_add.png" alt="Add Media Form" class="w-full rounded-lg">
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="inline-block p-3 bg-blue-100 text-blue-700 rounded-lg mb-4"><i class="fas fa-plus text-xl"></i></div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Inventory Control</h3>
-                    <p class="text-lg text-slate-600 leading-relaxed">
-                        A dedicated interface for expanding the collection. This form ensures data integrity by validating required fields like Author and Publication Date before committing the new entry to the permanent JSON storage.
-                    </p>
-                </div>
+                <h3 class="text-2xl font-bold mb-4">Smart Borrowing System</h3>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Allows librarians to check out media, store borrower info, and update the item state instantly.
+                </p>
             </div>
         </div>
 
-        <!-- TECHNICAL DEEP DIVE -->
-        <section class="code-bg rounded-3xl p-10 md:p-16 text-white shadow-2xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Technical Architecture</h2>
-            <p class="text-center text-slate-400 mb-10">This project utilizes a clear separation of concerns (MVC architecture) across three Python files:</p>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <!-- Backend Card -->
-                <div class="code-bg p-6 rounded-2xl border border-slate-700 hover:border-green-500/50 transition">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-server text-green-400 text-2xl"></i>
-                        <h3 class="text-xl font-bold text-green-400">Backend Logic (Flask)</h3>
-                    </div>
-                    <p class="text-slate-300 mb-6 text-sm">
-                        Built with Python Flask to serve RESTful API endpoints. Handles item creation, reading, and update requests from the frontend client.                     </p>
-                    <img src="code_backend.png" alt="Backend Code" class="rounded border border-slate-600 w-full opacity-90 hover:opacity-100 transition">
-                </div>
-
-                <!-- Frontend Card -->
-                <div class="code-bg p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-desktop text-blue-400 text-2xl"></i>
-                        <h3 class="text-xl font-bold text-blue-400">Frontend GUI (Tkinter)</h3>
-                    </div>
-                    <p class="text-slate-300 mb-6 text-sm">
-                        A custom-styled desktop interface built with Tkinter and TTK. Acts as the client, sending HTTP requests to the Flask server to retrieve data.
-                    </p>
-                    <img src="code_frontend.png" alt="Frontend Code" class="rounded border border-slate-600 w-full opacity-90 hover:opacity-100 transition">
+        <!-- Stats Panel -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+            <div class="md:w-1/2">
+                <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 -rotate-1 hover:rotate-0 transition">
+                    <img src="feature_stats.jpg" class="w-full rounded-lg">
                 </div>
             </div>
+            <div class="md:w-1/2">
+                <div class="inline-block p-3 bg-purple-100 text-purple-700 rounded-lg mb-4">
+                    <i class="fas fa-chart-pie text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Live Statistics</h3>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Shows total items, categories, and currently borrowed media using backend calculations.
+                </p>
+            </div>
+        </div>
 
-            <div class="mt-12 pt-8 border-t border-slate-700 flex flex-wrap justify-center gap-8 text-center">
-                <div>
-                    <span class="block text-2xl font-bold">JSON</span>
-                    <span class="text-slate-400 text-sm">Persistent Storage</span>
+        <!-- Inventory -->
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
+                    <img src="feature_add.png" class="w-full rounded-lg">
                 </div>
-                <div>
-                    <span class="block text-2xl font-bold">REST API</span>
-                    <span class="text-slate-400 text-sm">Communication</span>
+            </div>
+            <div class="md:w-1/2">
+                <div class="inline-block p-3 bg-blue-100 text-blue-700 rounded-lg mb-4">
+                    <i class="fas fa-plus text-xl"></i>
                 </div>
+                <h3 class="text-2xl font-bold mb-4">Inventory Control</h3>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Add new media with validation checks for author, date, and category.
+                </p>
+            </div>
+        </div>
+
+        <!-- INSTALLATION GUIDE -->
+        <section class="mt-28">
+            <h2 class="text-3xl font-bold text-center mb-10">Installation Guide</h2>
+
+            <div class="bg-white shadow-lg rounded-2xl p-8 border border-slate-200">
+                <ol class="list-decimal ml-6 space-y-4 text-lg">
+                    <li>Install Python (3.10 or above).</li>
+                    <li>Install required libraries:
+                        <pre class="bg-slate-900 text-white p-4 rounded-lg mt-2 text-sm">pip install flask requests</pre>
+                    </li>
+                    <li>Start the Flask backend:
+                        <pre class="bg-slate-900 text-white p-4 rounded-lg mt-2 text-sm">python backend.py</pre>
+                    </li>
+                    <li>Run the Tkinter desktop app:
+                        <pre class="bg-slate-900 text-white p-4 rounded-lg mt-2 text-sm">python app.py</pre>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- API DOCUMENTATION -->
+        <section class="mt-28">
+            <h2 class="text-3xl font-bold text-center mb-10">API Documentation</h2>
+
+            <div class="bg-white shadow-lg rounded-2xl p-8 border border-slate-200 space-y-8">
+
                 <div>
-                    <span class="block text-2xl font-bold">MVC</span>
-                    <span class="text-slate-400 text-sm">Design Pattern</span>
+                    <h3 class="text-xl font-bold mb-2">GET /items</h3>
+                    <p>Returns all media items.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-2">POST /add</h3>
+                    <p>Add a new item to the library.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-2">PUT /borrow/&lt;id&gt;</h3>
+                    <p>Mark an item as borrowed and store borrower information.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-2">PUT /return/&lt;id&gt;</h3>
+                    <p>Change the status back to available.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-2">GET /stats</h3>
+                    <p>Return total items, categories and currently borrowed count.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 mt-20 py-12 text-center">
-        <p class="text-slate-600">© 2025 Book Haven Library. Developed by <span class="font-bold text-slate-900">Om Damle</span>.</p>
+        <p class="text-slate-600">
+            © 2025 Book Haven Library. Developed by 
+            <span class="font-bold text-slate-900">Om Damle</span>.
+        </p>
     </footer>
 
+    <!-- DARK MODE SCRIPT -->
+    <script>
+        document.getElementById("darkToggle").onclick = function () {
+            document.body.classList.toggle("dark-mode");
+        };
+    </script>
 </body>
 </html>
