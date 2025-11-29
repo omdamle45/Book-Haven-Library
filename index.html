@@ -10,6 +10,9 @@
     <style>
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            transition: background 0.3s, color 0.3s;
         }
 
         .gradient-text {
@@ -17,6 +20,7 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero-bg {
@@ -24,25 +28,23 @@
         }
 
         .code-bg {
-            background-color: #1E293B;
-            color: #E2E8F0;
+            background-color: #1e293b;
+            color: #e2e8f0;
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-slate-800">
+<body>
 
-    <!-- HEADER -->
+    <!-- HEADER / HERO -->
     <header class="hero-bg py-20 border-b border-blue-100">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <p class="text-blue-600 font-semibold tracking-wider uppercase mb-4">Advanced Programming Final Project</p>
-
             <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900">
                 Book Haven <span class="gradient-text">Library Manager</span>
             </h1>
-
             <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-                A desktop library management application created by <span class="font-bold text-slate-900">Om Damle</span>,  
+                A desktop library management application developed by <span class="font-bold text-slate-900">Om Damle</span>,
                 Mechatronics Engineering student at SRH Berlin.
             </p>
 
@@ -62,118 +64,127 @@
 
     <main class="max-w-6xl mx-auto px-6 py-16">
 
-        <!-- FEATURES -->
-        <h2 class="text-3xl font-bold text-center text-slate-900 mb-16">Key Functionalities</h2>
-
-        <!-- Borrow -->
-        <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
-            <div class="md:w-1/2">
-                <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
-                    <img src="feature_borrow.jpg" class="w-full rounded-lg">
-                </div>
-            </div>
-            <div class="md:w-1/2">
-                <div class="inline-block p-3 bg-green-100 text-green-700 rounded-lg mb-4">
-                    <i class="fas fa-hand-holding-box text-xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Smart Borrowing System</h3>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    The app allows borrowers to check out media and updates the backend instantly.
-                </p>
-            </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
-            <div class="md:w-1/2">
-                <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 -rotate-1 hover:rotate-0 transition">
-                    <img src="feature_stats.jpg" class="w-full rounded-lg">
-                </div>
-            </div>
-            <div class="md:w-1/2">
-                <div class="inline-block p-3 bg-purple-100 text-purple-700 rounded-lg mb-4">
-                    <i class="fas fa-chart-pie text-xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Live Statistics</h3>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    Shows item counts, borrowed items and categories through backend calculations.
-                </p>
-            </div>
-        </div>
-
-        <!-- Inventory -->
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
-                    <img src="feature_add.png" class="w-full rounded-lg">
-                </div>
-            </div>
-            <div class="md:w-1/2">
-                <div class="inline-block p-3 bg-blue-100 text-blue-700 rounded-lg mb-4">
-                    <i class="fas fa-plus text-xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Inventory Control</h3>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    Add new media with validation for authors, dates and categories.
-                </p>
-            </div>
-        </div>
-
-        <!-- FRONTEND -->
-        <section class="mt-28">
-            <h2 class="text-3xl font-bold text-center mb-10">Frontend (Tkinter)</h2>
-
-            <div class="bg-white shadow-lg rounded-2xl p-8 border border-slate-200">
-                <p class="text-lg text-slate-600 mb-6">
-                    The frontend is created using Python Tkinter. It provides a simple and clean interface for adding items, borrowing books and viewing data.
-                </p>
-
-                <div class="mt-6 mx-auto max-w-3xl rounded-xl shadow-md overflow-hidden border">
-                    <img src="frontend_sample.png" class="w-full">
-                </div>
-            </div>
+        <!-- PROJECT OVERVIEW -->
+        <section class="mb-20 text-center">
+            <h2 class="text-3xl font-bold mb-6">Project Overview</h2>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+                Book Haven is a desktop-based library management system that helps manage borrowing, inventory, and statistics. It is designed to give students and librarians an easy-to-use interface with backend support using Python Flask.
+            </p>
         </section>
 
-        <!-- BACKEND -->
-        <section class="mt-28">
-            <h2 class="text-3xl font-bold text-center mb-10">Backend (Flask)</h2>
+        <!-- FEATURES -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-16">Key Functionalities</h2>
 
-            <div class="bg-white shadow-lg rounded-2xl p-8 border border-slate-200">
-                <p class="text-lg text-slate-600 mb-6">
-                    The backend is built using Flask. It provides API routes for adding items, updating status and showing statistics.
-                </p>
+            <!-- Borrow System -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
+                        <img src="feature_borrow.jpg" class="w-full rounded-lg" alt="Borrow System">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="inline-block p-3 bg-green-100 text-green-700 rounded-lg mb-4">
+                        <i class="fas fa-hand-holding-box text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Smart Borrowing System</h3>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Allows librarians to check out media, store borrower info, and update the item status instantly.
+                    </p>
+                </div>
+            </div>
 
-                <div class="mt-6 mx-auto max-w-3xl rounded-xl shadow-md overflow-hidden border">
-                    <img src="backend_sample.png" class="w-full">
+            <!-- Stats Panel -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 -rotate-1 hover:rotate-0 transition">
+                        <img src="feature_stats.jpg" class="w-full rounded-lg" alt="Statistics Panel">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="inline-block p-3 bg-purple-100 text-purple-700 rounded-lg mb-4">
+                        <i class="fas fa-chart-pie text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Live Statistics</h3>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Displays total items, categories, and currently borrowed media using backend calculations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Inventory -->
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
+                        <img src="feature_add.png" class="w-full rounded-lg" alt="Inventory Management">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="inline-block p-3 bg-blue-100 text-blue-700 rounded-lg mb-4">
+                        <i class="fas fa-plus text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Inventory Control</h3>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Add new media with validation checks for author, date, and category.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- INSTALLATION GUIDE -->
-        <section class="mt-28">
+        <section class="mb-20">
             <h2 class="text-3xl font-bold text-center mb-10">Installation Guide</h2>
 
             <div class="bg-white shadow-lg rounded-2xl p-8 border border-slate-200">
                 <ol class="list-decimal ml-6 space-y-4 text-lg">
-                    <li>Install Python 3.10 or newer.</li>
-
-                    <li>Install dependencies:
+                    <li>Install Python (3.10 or above).</li>
+                    <li>Install required libraries:
                         <pre class="bg-slate-900 text-white p-4 rounded-lg mt-2 text-sm">pip install flask requests</pre>
                     </li>
-
                     <li>Start the Flask backend:
                         <pre class="bg-slate-900 text-white p-4 rounded-lg mt-2 text-sm">python backend.py</pre>
                     </li>
-
-                    <li>Open a second terminal and start the Tkinter frontend:
+                    <li>Run the Tkinter frontend:
                         <pre class="bg-slate-900 text-white p-4 rounded-lg mt-2 text-sm">python frontend.py</pre>
                     </li>
                 </ol>
             </div>
         </section>
 
+        <!-- FRONTEND -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Frontend (Tkinter)</h2>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="code_frontend.png" class="w-full rounded-lg shadow-lg" alt="Frontend Sample Code">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        The frontend of Book Haven is developed using Python Tkinter. It provides a user-friendly interface for managing library operations like borrowing, returning, and adding media items. Users interact directly with this interface while backend processes run in parallel.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BACKEND -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Backend (Flask)</h2>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        The backend is implemented using Python Flask. It handles RESTful API requests, data processing, and manages the database for library items. The backend ensures that all operations are synced and accurate.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="code_backend.png" class="w-full rounded-lg shadow-lg" alt="Backend Sample Code">
+                </div>
+            </div>
+        </section>
+
         <!-- API DOCUMENTATION -->
-        <section class="mt-28">
+        <section class="mb-20">
             <h2 class="text-3xl font-bold text-center mb-10">API Documentation</h2>
 
             <div class="bg-white shadow-lg rounded-2xl p-8 border border-slate-200 space-y-8">
@@ -181,35 +192,34 @@
                     <h3 class="text-xl font-bold mb-2">GET /items</h3>
                     <p>Returns all media items.</p>
                 </div>
-
                 <div>
                     <h3 class="text-xl font-bold mb-2">POST /add</h3>
-                    <p>Add a new media item.</p>
+                    <p>Add a new item to the library.</p>
                 </div>
-
                 <div>
                     <h3 class="text-xl font-bold mb-2">PUT /borrow/&lt;id&gt;</h3>
-                    <p>Mark an item as borrowed.</p>
+                    <p>Mark an item as borrowed and store borrower information.</p>
                 </div>
-
                 <div>
                     <h3 class="text-xl font-bold mb-2">PUT /return/&lt;id&gt;</h3>
-                    <p>Mark the item as returned.</p>
+                    <p>Change the status back to available.</p>
                 </div>
-
                 <div>
                     <h3 class="text-xl font-bold mb-2">GET /stats</h3>
-                    <p>Shows library statistics.</p>
+                    <p>Return total items, categories, and currently borrowed count.</p>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 mt-20 py-12 text-center">
         <p class="text-slate-600">
-            © 2025 Book Haven Library. Created by 
+            © 2025 Book Haven Library. Developed by 
             <span class="font-bold text-slate-900">Om Damle</span>.
         </p>
     </footer>
+
 </body>
 </html>
