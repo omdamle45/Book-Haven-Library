@@ -10,11 +10,18 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         .gradient-text {
             background: linear-gradient(to right, #2563eb, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            /* Standard and Webkit properties for compatibility */
+            background-clip: text;
+            -webkit-background-clip: text; 
+            color: transparent;
+            -webkit-text-fill-color: transparent; 
         }
         .hero-bg {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .code-bg {
+            background-color: #1E293B; /* Darker Slate for code boxes */
+            color: #E2E8F0;
         }
     </style>
 </head>
@@ -100,30 +107,30 @@
         </div>
 
         <!-- TECHNICAL DEEP DIVE -->
-        <section class="bg-slate-900 rounded-3xl p-10 md:p-16 text-white shadow-2xl">
+        <section class="code-bg rounded-3xl p-10 md:p-16 text-white shadow-2xl">
             <h2 class="text-3xl font-bold text-center mb-12">Technical Architecture</h2>
-            
+            <p class="text-center text-slate-400 mb-10">This project utilizes a clear separation of concerns (MVC architecture) across three Python files:</p>
+
             <div class="grid md:grid-cols-2 gap-10">
                 <!-- Backend Card -->
-                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-green-500/50 transition">
+                <div class="code-bg p-6 rounded-2xl border border-slate-700 hover:border-green-500/50 transition">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-server text-green-400 text-2xl"></i>
                         <h3 class="text-xl font-bold text-green-400">Backend Logic (Flask)</h3>
                     </div>
                     <p class="text-slate-300 mb-6 text-sm">
-                        Built with Python Flask to serve RESTful API endpoints. Handles CRUD operations, search logic, and file I/O for the JSON database.
-                    </p>
+                        Built with Python Flask to serve RESTful API endpoints. Handles item creation, reading, and update requests from the frontend client.                     </p>
                     <img src="image_65e79f.png" alt="Backend Code" class="rounded border border-slate-600 w-full opacity-90 hover:opacity-100 transition">
                 </div>
 
                 <!-- Frontend Card -->
-                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition">
+                <div class="code-bg p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-desktop text-blue-400 text-2xl"></i>
                         <h3 class="text-xl font-bold text-blue-400">Frontend GUI (Tkinter)</h3>
                     </div>
                     <p class="text-slate-300 mb-6 text-sm">
-                        A modern desktop interface built with Tkinter and TTK. Features a custom theme, treeview data grid, and responsive event handling.
+                        A custom-styled desktop interface built with Tkinter and TTK. Acts as the client, sending HTTP requests to the Flask server to retrieve data.
                     </p>
                     <img src="image_65e781.png" alt="Frontend Code" class="rounded border border-slate-600 w-full opacity-90 hover:opacity-100 transition">
                 </div>
