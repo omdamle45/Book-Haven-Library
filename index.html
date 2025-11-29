@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Library - Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans text-slate-800">
+
+    <!-- HERO SECTION -->
+    <header class="bg-slate-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">📚 Book Haven Library</h1>
+            <p class="text-xl text-blue-200 mb-8">A Full-Stack Library Management System built with Python</p>
+            <div class="flex justify-center gap-4">
+                <a href="#features" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition">View Features</a>
+                <a href="https://github.com/omdamle45/Book-Haven-Library" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-bold transition">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- TECH STACK -->
+    <section class="py-10 bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-8 text-center text-gray-500">
+            <div class="flex items-center gap-2"><i class="fab fa-python text-blue-500 text-2xl"></i> <span class="font-bold">Python</span></div>
+            <div class="flex items-center gap-2"><i class="fas fa-server text-green-500 text-2xl"></i> <span class="font-bold">Flask Backend</span></div>
+            <div class="flex items-center gap-2"><i class="fas fa-desktop text-purple-500 text-2xl"></i> <span class="font-bold">Tkinter GUI</span></div>
+            <div class="flex items-center gap-2"><i class="fas fa-database text-yellow-500 text-2xl"></i> <span class="font-bold">JSON Database</span></div>
+        </div>
+    </section>
+
+    <!-- PROJECT OVERVIEW -->
+    <section id="features" class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">Project Overview</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">Smart Library Management</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        This application serves as a complete solution for managing media in a library. 
+                        It moves beyond simple storage by offering features like borrowing tracking, 
+                        automatic data persistence, and a modern graphical interface.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> <span><strong>Full CRUD:</strong> Create, Read, Update, and Delete items.</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> <span><strong>Smart Search:</strong> Find books even with partial names.</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> <span><strong>Borrow System:</strong> Track who borrowed a book and when.</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> <span><strong>Analytics:</strong> View statistics on library holdings.</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-2 rounded-xl shadow-lg border border-gray-200">
+                    <!-- PLACEHOLDER IMAGE: Replace 'app_full.png' with your actual screenshot -->
+                    <img src="app_full.png" alt="Full Application Interface" class="rounded-lg w-full">
+                    <p class="text-center text-sm text-gray-400 mt-2">Main Application Interface</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="py-16 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Application Gallery</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-4 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg mb-2">1. Fresh Start (Empty State)</h3>
+                    <img src="app_empty.png" alt="Empty State" class="rounded border border-gray-100 w-full h-64 object-cover object-top">
+                    <p class="text-gray-600 text-sm mt-2">The application handles empty databases gracefully without errors.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-4 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg mb-2">2. Populated Library</h3>
+                    <img src="app_full.png" alt="Populated State" class="rounded border border-gray-100 w-full h-64 object-cover object-top">
+                    <p class="text-gray-600 text-sm mt-2">Users can filter by category and view detailed metadata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CODE SHOWCASE -->
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Under the Hood</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-900 p-6 rounded-xl text-white">
+                    <h3 class="text-xl font-bold mb-4 text-green-400"><i class="fas fa-code"></i> Backend (Flask)</h3>
+                    <p class="mb-4 text-gray-300">The backend provides a RESTful API to handle data operations securely.</p>
+                    <img src="code_backend.png" alt="Backend Code" class="rounded border border-gray-700 opacity-80 hover:opacity-100 transition">
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-xl text-white">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400"><i class="fas fa-laptop-code"></i> Frontend (Tkinter)</h3>
+                    <p class="mb-4 text-gray-300">A modern GUI built with custom styling for a professional look.</p>
+                    <img src="code_frontend.png" alt="Frontend Code" class="rounded border border-gray-700 opacity-80 hover:opacity-100 transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center border-t border-slate-800">
+        <p>© 2025 Book Haven Library Project. Developed for Advanced Programming Module.</p>
+    </footer>
+
+</body>
+</html>

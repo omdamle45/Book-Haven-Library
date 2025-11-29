@@ -1,0 +1,121 @@
+{
+  "next_id": 16,
+  "items": {
+    "1": {
+      "id": 1,
+      "name": "Rich Dad Poor Dad",
+      "publication_date": "1997-04-01",
+      "author": "Robert T. Kiyosaki",
+      "category": "Book",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    },
+    "2": {
+      "id": 2,
+      "name": "Clean Code",
+      "publication_date": "2008-08-10",
+      "author": "Robert C. Martin",
+      "category": "Book",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    },
+    "3": {
+      "id": 3,
+      "name": "Baahubali: The Beginning",
+      "publication_date": "2015-07-10",
+      "author": "S.S. Rajamouli",
+      "category": "Film",
+      "status": "Available"
+    },
+    "4": {
+      "id": 4,
+      "name": "Wired: The Future of Code",
+      "publication_date": "Cond\u00e9 Nast",
+      "author": "Cond\u00e9 Nast",
+      "category": "Magazine"
+    },
+    "6": {
+      "id": 6,
+      "name": "Baahubali 2: The Conclusion",
+      "publication_date": "2017-04-28",
+      "author": "S.S. Rajamouli",
+      "category": "Film"
+    },
+    "7": {
+      "id": 7,
+      "name": "Forbes: The World's Billionaires",
+      "publication_date": "2024-04-05",
+      "author": "Forbes Media",
+      "category": "Magazine"
+    },
+    "8": {
+      "id": 8,
+      "name": "Jumanji: Welcome to the Jungle",
+      "publication_date": "2017-12-20",
+      "author": "Jake Kasdan",
+      "category": "Film"
+    },
+    "10": {
+      "id": 10,
+      "name": "Diary of a Wimpy Kid",
+      "publication_date": "2007-04-01",
+      "author": "Jeff Kinney",
+      "category": "Book",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    },
+    "11": {
+      "id": 11,
+      "name": "Pushpa: The Rise",
+      "publication_date": "2021-12-17",
+      "author": "Sukumar",
+      "category": "Film",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    },
+    "12": {
+      "id": 12,
+      "name": "Pushpa 2: The Rule",
+      "publication_date": "2024-12-06",
+      "author": "Sukumar",
+      "category": "Film",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    },
+    "13": {
+      "id": 13,
+      "name": "Avengers: Endgame",
+      "publication_date": "2019-04-26",
+      "author": "Anthony & Joe Russo",
+      "category": "Film",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    },
+    "14": {
+      "id": 14,
+      "name": "3 Idiots",
+      "publication_date": "2009-12-25",
+      "author": "Rajkumar Hirani",
+      "category": "Film",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    },
+    "15": {
+      "id": 15,
+      "name": "The Hitman: The Rohit Sharma Story",
+      "publication_date": "2020-11-20",
+      "author": "Vijay Lokapally",
+      "category": "Book",
+      "status": "Available",
+      "borrow_date": null,
+      "borrower": null
+    }
+  }
+}
