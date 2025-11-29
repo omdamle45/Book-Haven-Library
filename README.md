@@ -1,54 +1,51 @@
-# Advanced Book Store (Media Library)
- 
-## About the Book Store
-A simple, local media library that manages Books, Films, and Magazines. It provides:
-- A Flask backend for CRUD operations on media items.
-- A modern Tkinter GUI to browse, search, filter, add, edit, and delete items.
-- Persistent storage in a JSON file (media_store.json), no external DB required.
+# Book Haven: Library Manager
 
-## What You Need to Start
-Prerequisites:
-- Python 3.9+ installed
-- Internet access to install dependencies
-- Basic familiarity with running Python scripts
+Book Haven is a desktop application built with Python to help manage a small library's inventory (books, films, magazines) and track borrowing activity.
 
-Setup:
-1. (Optional) Create and activate a virtual environment.
-2. Install dependencies:
-   - pip install flask flask-cors requests
-3. Ensure all project files are in the same folder:
-   - backend.py, frontend.py, database.py, media_store.json (auto-created)
+The system is designed with a clear separation of tasks: a **server** handles the core logic and data, and a **desktop application** provides the visual interface.
 
-## How to Run
-Backend (starts on http://127.0.0.1:8000):
-- python backend.py
+---
 
-Frontend (in another terminal):
-- python frontend.py
+## What the Program Does
 
-## Features
-- Modern Tkinter GUI (Book Haven Manager).
-- List all media with ID, Name, Category, Author.
-- Filter by category (All, Book, Film, Magazine).
-- Exact name search.
-- View detailed metadata with category icon.
-- Create, edit, and delete media (POST/PUT/DELETE).
-- Persistent JSON file media_store.json auto-created.
+The application offers several core functions for efficient library management:
 
-## API Endpoints
-GET /media  
-GET /media/category/<category>  
-GET /media/search?name=ExactName  
-GET /media/<id>  
-POST /media  (JSON: name, publication_date, author, category)  
-PUT /media/<id>  (JSON: name, publication_date, author, category)  
-DELETE /media/<id>
+* **Borrow and Return:** Easily check out items to patrons, record their names, and update the item status when it's returned.
+* **Filter Items:** Users can quickly narrow the main list to show only **Books**, **Films**, or **Magazines**, making search faster.
+* **Edit Records:** You can correct or update the details (like the author or title) of any media item already in the library.
+* **View Statistics:** Provides a real-time summary of the current inventory, including totals and the number of items currently checked out.
+* **Add New Media:** A dedicated form allows staff to add new items to the library collection.
 
-## What Is Needed / Recommendations
-- Input validation (dates, required fields, category whitelist).
-- Error handling and user feedback (network errors, backend exceptions).
-- Basic authentication if multi-user or network-exposed.
-- Packaging: requirements.txt and optional installer script.
-- Testing: unit tests for database.py and API routes.
-- Data backup/restore for media_store.json.
-- Optional enhancements: pagination, fuzzy search, export/import CSV/JSON.
+---
+
+## How It Works (Technical Overview)
+
+The system uses a standard **Client-Server** model written entirely in Python. 
+
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **The Desktop App** | **Python Tkinter** | The visual program that users interact with. It sends requests (messages) to the Server. |
+| **The Server** | **Python Flask** | This runs in the background. It manages all the business rules (like loan limits) and controls the database. |
+| **The Database** | **JSON File** | A simple file used to permanently save all of the library's inventory and loan data. |
+
+---
+
+## Simple Setup Guide
+
+You must start the **Server first**, then the **Desktop Application**.
+
+1.  **Install Python** (Version 3.10 or newer).
+2.  **Install required tools** (Flask and Requests):
+    ```bash
+    pip install flask requests
+    ```
+3.  **Start the Server (Backend):** Open a command line/terminal and run:
+    ```bash
+    python backend.py
+    ```
+    *(Keep this window open and running.)*
+4.  **Run the Desktop App (Frontend):** Open a second command line/terminal and run:
+    ```bash
+    python frontend.py
+    ```
+    *The app window will now open and connect to the running server.*
