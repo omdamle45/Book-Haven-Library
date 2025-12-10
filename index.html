@@ -222,27 +222,24 @@
                 <div class="grid md:grid-cols-3 gap-8 mb-24">
                     <!-- Img 1 -->
                     <div class="group relative rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700 hover:border-yellow-500 transition">
-                        <div class="w-full h-80 bg-slate-800 flex items-center justify-center">
-                             <i class="fas fa-image text-4xl text-slate-600"></i> <!-- Placeholder -->
-                        </div>
+                        <!-- Restored Image Tag -->
+                        <img src="game_start.jpg" alt="Start Screen" class="w-full h-80 object-cover object-top transition duration-500 group-hover:scale-110">
                         <div class="absolute bottom-0 left-0 right-0 bg-slate-900/90 p-3 z-20 border-t border-slate-700">
                             <p class="text-yellow-400 font-mono text-xs text-center">FIG 1. PLAYER LOGIN</p>
                         </div>
                     </div>
                     <!-- Img 2 -->
                     <div class="group relative rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700 hover:border-red-500 transition">
-                        <div class="w-full h-80 bg-slate-800 flex items-center justify-center">
-                            <i class="fas fa-image text-4xl text-slate-600"></i> <!-- Placeholder -->
-                       </div>
+                        <!-- Restored Image Tag -->
+                        <img src="game_action.jpg" alt="Action Screen" class="w-full h-80 object-cover object-top transition duration-500 group-hover:scale-110">
                         <div class="absolute bottom-0 left-0 right-0 bg-slate-900/90 p-3 z-20 border-t border-slate-700">
                             <p class="text-red-400 font-mono text-xs text-center">FIG 2. COMBAT MECHANICS</p>
                         </div>
                     </div>
                     <!-- Img 3 -->
                     <div class="group relative rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700 hover:border-green-500 transition">
-                        <div class="w-full h-80 bg-slate-800 flex items-center justify-center">
-                            <i class="fas fa-image text-4xl text-slate-600"></i> <!-- Placeholder -->
-                       </div>
+                        <!-- Restored Image Tag -->
+                        <img src="game_over.jpg" alt="End Screen" class="w-full h-80 object-cover object-top transition duration-500 group-hover:scale-110">
                         <div class="absolute bottom-0 left-0 right-0 bg-slate-900/90 p-3 z-20 border-t border-slate-700">
                             <p class="text-green-400 font-mono text-xs text-center">FIG 3. SCORING SYSTEM</p>
                         </div>
@@ -307,8 +304,9 @@
                 </div>
 
                 <!-- HERO IMAGE -->
-                <div class="mt-16 relative mx-auto max-w-5xl rounded-xl shadow-2xl border-4 border-white overflow-hidden bg-white h-96 flex items-center justify-center">
-                    <i class="fas fa-laptop-code text-9xl text-slate-200"></i> <!-- Placeholder -->
+                <div class="mt-16 relative mx-auto max-w-5xl rounded-xl shadow-2xl border-4 border-white overflow-hidden">
+                    <!-- Restored Image Tag -->
+                    <img src="hero_main.png" alt="Book Haven Dashboard" class="w-full">
                 </div>
             </div>
 
@@ -328,8 +326,9 @@
                     <!-- Feature 1 -->
                     <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
                         <div class="md:w-1/2">
-                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition h-64 bg-slate-50 flex items-center justify-center">
-                                <i class="fas fa-hand-holding-box text-6xl text-slate-300"></i>
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
+                                <!-- Restored Image Tag -->
+                                <img src="feature_borrow.jpg" class="w-full rounded-lg" alt="Borrow System">
                             </div>
                         </div>
                         <div class="md:w-1/2">
@@ -346,8 +345,9 @@
                     <!-- Feature 2 -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
                         <div class="md:w-1/2">
-                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 -rotate-1 hover:rotate-0 transition h-64 bg-slate-50 flex items-center justify-center">
-                                <i class="fas fa-filter text-6xl text-slate-300"></i>
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 -rotate-1 hover:rotate-0 transition">
+                                <!-- Restored Image Tag -->
+                                <img src="feature_filter.png" class="w-full rounded-lg" alt="Category Filtering System">
                             </div>
                         </div>
                         <div class="md:w-1/2">
@@ -357,6 +357,63 @@
                             <h3 class="text-2xl font-bold mb-4">Category Filtering</h3>
                             <p class="text-lg text-slate-600 leading-relaxed">
                                 Quickly narrow the library list view by category (Books, Films, Magazines). This feature utilizes a dedicated API endpoint to retrieve specific subsets of data.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                        <div class="md:w-1/2">
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
+                                <!-- Restored Image Tag -->
+                                <img src="feature_edit.png" class="w-full rounded-lg" alt="Edit Media Interface">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="inline-block p-3 bg-indigo-100 text-indigo-700 rounded-lg mb-4">
+                                <i class="fas fa-edit text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Edit Existing Media</h3>
+                            <p class="text-lg text-slate-600 leading-relaxed">
+                                Easily modify details of any existing book, film, or magazine. Update titles, authors, publication dates, and categories with simple form inputs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+                        <div class="md:w-1/2">
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 -rotate-1 hover:rotate-0 transition">
+                                <!-- Restored Image Tag -->
+                                <img src="feature_stats.jpg" class="w-full rounded-lg" alt="Statistics Panel">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="inline-block p-3 bg-purple-100 text-purple-700 rounded-lg mb-4">
+                                <i class="fas fa-chart-pie text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Live Statistics</h3>
+                            <p class="text-lg text-slate-600 leading-relaxed">
+                                Displays total items, categories, and currently borrowed media using backend calculations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <div class="md:w-1/2">
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 rotate-1 hover:rotate-0 transition">
+                                <!-- Restored Image Tag -->
+                                <img src="feature_add.png" class="w-full rounded-lg" alt="Inventory Management">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="inline-block p-3 bg-blue-100 text-blue-700 rounded-lg mb-4">
+                                <i class="fas fa-plus text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Inventory Control</h3>
+                            <p class="text-lg text-slate-600 leading-relaxed">
+                                Add new media with validation checks for author, date, and category before committing to storage.
                             </p>
                         </div>
                     </div>
